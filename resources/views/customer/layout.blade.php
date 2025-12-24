@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    <title>Customer Panel</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{ config('app.name', 'E_Site') }}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
@@ -25,7 +28,7 @@
                     </a>
 
                     <a href="{{ route('customer.invoices') }}" class="btn btn-success btn-sm">
-                        Invoices 
+                        Invoices
                     </a>
 
                     <a href="{{ route('customer.logout') }}" class="btn btn-danger btn-sm">
